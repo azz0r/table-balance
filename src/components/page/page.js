@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Page = ({ children, }) =>
-  <main id="page-container" className="page-container no-select">
+  <main id="page-container">
     {children}
   </main>
 
