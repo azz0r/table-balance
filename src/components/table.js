@@ -16,8 +16,10 @@ const styles = StyleSheet.create({
   },
 })
 
-const Table = ({ active = false, }) =>
-  <div className={css(active ? styles.active : styles.inactive, styles.size)} />
+const Table = ({ active = false, amountOfDiners = 0, }) =>
+  <div className={css(active ? styles.active : styles.inactive, styles.size)}>
+    {amountOfDiners} diners
+  </div>
 
 Table.propTypes = {
   active: PropTypes.bool.isRequired,
