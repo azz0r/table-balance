@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
   size: {
     height: "10rem",
     width: "35rem",
+    margin: "1rem",
   },
   active: {
     backgroundColor: "brown",
@@ -20,13 +21,16 @@ const text = {
   inactive: "Empty table",
 }
 
-const Table = ({ active = false, amountOfDiners = 0, }) =>
-  <div className={css(active ? styles.active : styles.inactive, styles.size)}>
-    {active ? `${amountOfDiners} diners` : text.inactive}
-  </div>
+const Table = ({ amountOfDiners = 0, }) => {
+  const active = Boolean(amountOfDiners > 0)
+  return (
+    <div className={css(active ? styles.active : styles.inactive, styles.size)}>
+      {active ? `${amountOfDiners} diners` : text.inactive}
+    </div>
+  )
+}
 
 Table.propTypes = {
-  active: PropTypes.bool.isRequired,
   amountOfDiners: PropTypes.number.isRequired,
 }
 

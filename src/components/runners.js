@@ -8,8 +8,9 @@ import Runner from "./runner"
 const styles = StyleSheet.create({
   container: {
     display: "flex",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
+    flexWrap: "wrap",
   },
 })
 

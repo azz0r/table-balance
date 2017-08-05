@@ -5,8 +5,14 @@ import { StyleSheet, css } from "aphrodite"
 
 const styles = StyleSheet.create({
   container: {
-    padding: "1rem",
+    padding: ".1rem",
     color: "white",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "baseline",
+  },
+  item: {
+    padding: ".2rem",
   },
 })
 
@@ -16,10 +22,10 @@ const ActiveRunners = ({ runners, }) => {
   return (
     <span className={css(styles.container)}>
       <h3>Runners</h3>
-      <p>
+      <p className={css(styles.item)}>
         Active: {activeRunners}
       </p>
-      <p>
+      <p className={css(styles.item)}>
         Inactive: {inActiveRunners}
       </p>
     </span>

@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
   size: {
     height: "5rem",
     width: "5rem",
+    margin: "0.5rem",
   },
   active: {
     backgroundColor: "white",

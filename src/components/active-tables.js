@@ -7,19 +7,25 @@ const styles = StyleSheet.create({
   container: {
     padding: ".1rem",
     color: "white",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "baseline",
+  },
+  item: {
+    padding: ".2rem",
   },
 })
 
 const ActiveTables = ({ tables, }) => {
-  const activeTables = tables.filter(runner => runner.active).length
+  const activeTables = tables.filter(runner => runner.amountOfDiners > 0).length
   const inActiveTables = tables.length - activeTables
   return (
     <span className={css(styles.container)}>
-      <h3>Tables</h3>
-      <p>
+      <h3>Tables:</h3>
+      <p className={css(styles.item)}>
         Active: {activeTables}
       </p>
-      <p>
+      <p className={css(styles.item)}>
         Inactive: {inActiveTables}
       </p>
     </span>
