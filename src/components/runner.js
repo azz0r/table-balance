@@ -16,8 +16,15 @@ const styles = StyleSheet.create({
   },
 })
 
+const text = {
+  active: "Working",
+  inactive: "On a break",
+}
+
 const Runner = ({ active = false, }) =>
-  <div className={css(active ? styles.active : styles.inactive, styles.size)} />
+  <div className={css(active ? styles.active : styles.inactive, styles.size)}>
+    {active ? text.active : text.inactive}
+  </div>
 
 Runner.propTypes = {
   active: PropTypes.bool.isRequired,

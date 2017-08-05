@@ -16,13 +16,18 @@ const styles = StyleSheet.create({
   },
 })
 
+const text = {
+  inactive: "Empty table",
+}
+
 const Table = ({ active = false, amountOfDiners = 0, }) =>
   <div className={css(active ? styles.active : styles.inactive, styles.size)}>
-    {amountOfDiners} diners
+    {active ? `${amountOfDiners} diners` : text.inactive}
   </div>
 
 Table.propTypes = {
   active: PropTypes.bool.isRequired,
+  amountOfDiners: PropTypes.number.isRequired,
 }
 
 Table.displayName = "Table"

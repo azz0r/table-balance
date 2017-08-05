@@ -11,7 +11,7 @@ const getRandomAmountOfDiners = (min = 1, max = 10) =>
 
 const tables = [
   { id: 1, active: true, amountOfDiners: getRandomAmountOfDiners(), },
-  { id: 2, active: false, amountOfDiners: getRandomAmountOfDiners(), },
+  { id: 2, active: false, amountOfDiners: 0, },
 ]
 const runners = [{ id: 1, active: true, }, { id: 2, active: false, },]
 
