@@ -50,7 +50,7 @@ module.exports = {
         exclude: [
           /\.html$/,
           /\.(js|jsx)$/,
-          /\.css|scss$/,
+          /\.css$/,
           /\.json$/,
           /\.gif$/,
           /\.jpe?g$/,
@@ -76,20 +76,6 @@ module.exports = {
         options: {
           cacheDirectory: true,
         },
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
       },
       {
         test: /\.css$/,
