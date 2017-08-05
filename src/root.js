@@ -13,11 +13,7 @@ export default class Root extends React.Component {
     return (
       <Provider store={store}>
         <ContextHolder context={context}>
-          <Router
-            key={new Date()}
-            history={hashHistory}
-            routes={routes()}
-          />
+          <Router key={new Date()} history={hashHistory} routes={routes()} />
         </ContextHolder>
       </Provider>
     )

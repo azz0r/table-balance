@@ -1,22 +1,27 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import { StyleSheet, css } from "aphrodite"
 
 const styles = StyleSheet.create({
-  background: {
-    backgroundColor: "black",
+  size: {
+    height: "10rem",
+    width: "35rem",
   },
-  fullTable: {
-    width: "100vw",
-    height: "100vh",
-    display: "flex",
+  active: {
+    backgroundColor: "brown",
+  },
+  inactive: {
+    backgroundColor: "saddleBrown",
   },
 })
 
-const Table = ({ children, }) =>
-  <main className={css(styles.fullTable, styles.background)}>
-    {children}
-  </main>
+const Table = ({ active = false, }) =>
+  <div className={css(active ? styles.active : styles.inactive, styles.size)} />
+
+Table.propTypes = {
+  active: PropTypes.bool.isRequired,
+}
 
 Table.displayName = "Table"
 
