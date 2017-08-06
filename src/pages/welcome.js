@@ -5,6 +5,7 @@ import Tables from "../components/tables"
 import Runners from "../components/runners"
 import ActiveRunners from "../components/active-runners"
 import ActiveTables from "../components/active-tables"
+import Timer from "../components/timer"
 
 const MIN_DINERS = 0
 const MAX_DINERS = 8
