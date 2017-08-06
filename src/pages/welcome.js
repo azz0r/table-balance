@@ -13,7 +13,7 @@ const MAX_DINERS = 8
 const getRandomInt = (min = 0, max = 25) =>
   Math.round(Math.random() * (max - min) + min)
 const getRandomBool = (min = 0, max = 2) =>
-  Math.round(Math.random() * (max - min) + min) % 2
+  Boolean(Math.round(Math.random() * (max - min) + min) % 2)
 
 const tables = [
   { id: 1, amountOfDiners: getRandomInt(MIN_DINERS, MAX_DINERS), },
