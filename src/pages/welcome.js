@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
 const WelcomePage = () =>
   <section>
     <h1 className={css(styles.header)}>Welcome to Table Balance</h1>
+    <Timer />
     <ActiveRunners runners={runners} />
     <ActiveTables tables={tables} />
     <Runners runners={runners} />
