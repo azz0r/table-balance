@@ -3,8 +3,9 @@ import PropTypes from "prop-types"
 import { StyleSheet, css } from "aphrodite"
 
 const styles = StyleSheet.create({
-  background: {
+  skin: {
     backgroundColor: "black",
+    color: "white",
   },
   fullPage: {
     width: "100%",
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
 })
 
 const Page = ({ children, }) =>
-  <main className={css(styles.fullPage, styles.background)}>
+  <main className={css(styles.fullPage, styles.skin)}>
     {children}
   </main>
 
