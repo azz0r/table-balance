@@ -1,6 +1,6 @@
-import Model from "./game.model"
+import Model from "./table.model"
 
-const defaultState = new Model().toJSON()
+const defaultState = []
 
 export default (state = defaultState, action) => {
   state = JSON.parse(JSON.stringify(state))
@@ -10,10 +10,7 @@ export default (state = defaultState, action) => {
     case "RESET_GAME":
       state = defaultState
       break
-    case "START_GAME":
-      state.started = true
-      break
   }
 
-  return new Model(state).toJSON()
+  return state.map(item => new Model(item).toJSON())
 }
